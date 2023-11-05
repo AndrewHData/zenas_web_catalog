@@ -10,7 +10,7 @@ my_cur = my_cnx.cursor()
 
 # run a snowflake query and put it all in a var called_my_catalog
 my_cur.execute("select color_or_style from catalog_for_website")
-my_data_row = my_cur.fetchall()
+my_catalog = my_cur.fetchall()
 
 # put the data into a dataframe
 df = pandas.DataFrame(my_catalog)
